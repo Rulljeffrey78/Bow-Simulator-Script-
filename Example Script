@@ -1,0 +1,20 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("My Example Script", "DarkTheme")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main Controls")
+
+Section:NewButton("Click Me", "This is a simple button", function()
+    print("Button clicked!")
+end)
+
+Section:NewToggle("Auto Train", "Toggles auto train", function(state)
+    print("Auto Train:", state)
+end)
+
+Section:NewSlider("Speed", "Change WalkSpeed", 100, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewTextBox("Jefftzy", "Mine Jefftzy", function(txt)
+    print("You typed: "..txt)
+end)
