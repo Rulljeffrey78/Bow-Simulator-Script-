@@ -7,5 +7,29 @@ local Section = Tab:NewSection("OP Bow")
 Section:NewLabel("OP")
 
 Section:NewButton("auto train", "auto win", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Rulljeffrey78/Bow-Simulator-Script-/5f5a7b3f6dd976e15318944fa111a3e786ae5a9b/Bow%20Simulator%20Script"))()
+
+end)
+
+button:UpdateButton("New Text")
+
+Section:NewToggle("ToggleText", "ToggleInfo", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+
+getgenv().Toggled = false
+
+local toggle = Section:NewToggle("Toggle", "Info", (state)
+    getgenv().Toggled = state
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	if getgenv().Toggled then
+		toggle:UpdateToggle("Toggle On")
+	else
+		toggle:UpdateToggle("Toggle Off")
+	end
 end)
