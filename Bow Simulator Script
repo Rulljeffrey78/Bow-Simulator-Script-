@@ -7,7 +7,7 @@ local Section = Tab:NewSection("OP Bow")
 Section:NewLabel("OP")
 
 Section:NewButton("auto train", "auto win", function()
-
+https://raw.githubusercontent.com/Rulljeffrey78/Bow-Simulator-Script-/refs/heads/main/Bow%20Simulator%20Script
 end)
 
 button:UpdateButton("New Text")
